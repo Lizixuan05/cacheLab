@@ -1,16 +1,27 @@
  |--cache_verify/        目录，Cache模块级验证环境。
+ 
  |  |--rtl/              目录，包含Cache模块以及验证顶层的设计源码。
+ 
  |  |  |--cache_top.v    Cache模块级验证的顶层文件。
+ 
  |  |  |--cache.v        Cache模块的实现文件。
+ 
  |  |--testbench/        目录，包含功能仿真验证源码。
+ 
  |  |  |--testbench.v    仿真顶层。
+ 
  |  |--run_vivado/       Vivado工程的运行目录。
+ 
  |  |  |--constraints/   Vivado工程的设计约束。
+ 
  |  |  |--cache_prj/     Vivado工程文件所在目录。
 
 本实验环境中推荐使用tcl创建Vivado工程，下面介绍一种利用tcl创建Vivado工程的步骤：
+
 步骤1：启动Vivado后，如图D.8所示点击最下方的“Tcl Console”标签。
+
 步骤2：在打开的Tcl Console中输入命令，cd 到待使用 create_project.tcl 文件所在目录
+
 步骤3：继续在Tcl Console中输入命令“source ./create_project.tcl”。接下来Vivado将根据create_project.tcl的内容创建工程。
 
 本实验开发环境是在Vivado 2019.2中创建的，如果使用更高版本的Vivado打开，需要对IP核进行升级。注意：Vivado不支持向前兼容，也就是低版本Vivado无法使用高版本Vivado创建的工程和IP核，若您遇到这种情况，请升级Vivado的版本。
